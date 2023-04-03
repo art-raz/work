@@ -4,6 +4,11 @@ clear
 
 echo "Ипотечный калькулятор"
 read -p "Введите стоимость: " stoimost
+while [ $stoimost -le 0 ]; do
+    echo "Некорректное значение!"
+    echo "Стоимость жилья может быть только положительной."
+    read -p "Введите стоимость жилья (в рублях): " stoimost
+done
 read -p "Введите взнос: " vznos
 read -p "Введите ставку: " stavka
 read -p "Введите срок: " srok
